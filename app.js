@@ -1,35 +1,38 @@
-const puppeteer = require('puppeteer');
-const cheerio=require('cheerio');
+
+var moment=require('moment');
+var schedule = require('node-schedule');
+
+var pc=require('./lib/pc.js');
+
+//scheduleJob使用说明
+//*    *    *    *    *    *
+// ┬    ┬    ┬    ┬    ┬    ┬
+// │    │    │    │    │    │
+// │    │    │    │    │    └ day of week (0 - 7) (0 or 7 is Sun)
+// │    │    │    │    └───── month (1 - 12)
+// │    │    │    └────────── day of month (1 - 31)
+// │    │    └─────────────── hour (0 - 23)
+// │    └──────────────────── minute (0 - 59)
+// └───────────────────────── second (0 - 59, OPTIONAL)
+
+//****************************
+//自动执行的的job列表
+//爬取【什么值得买】前20页链接，运行时间：每6个小时一次
+//根据【什么值得买】每个链接，爬取每个页面的内容，运行时间：每1个小时一次
+
+//****************************
+
+// schedule.scheduleJob('*/2 * * * *', function(){
+// 	console.log(moment().format('YYYY-MM-DD HH:mm:ss'));
+// });
 
 
-(async () => {
-	const browser = await puppeteer.launch({
-		executablePath: './chrome/chrome.exe',
-		headless:false
-	});
-	const page = await browser.newPage();
-	await page.setViewport({
-		 width:1600,
-		 height:1200
-	})
-	await page.goto('https://faxian.smzdm.com/h4s0t0f0c0p1/#filter-block',{
-		timeout:90000,
-		waitUntil:'networkidle2'
-	});
-	await page.screenshot({path: 'example.png'});
-	var t=await page.content();
-
-	const $ = cheerio.load(t);
-
-	$('.feed-ver-title').each(function(){
-		console.log($(this).text());
-	})
+// pc.smzdm();
+pc.getContent();
 
 
 
-	// console.log(t);
 
 
 
-	await browser.close();
-})();
+
