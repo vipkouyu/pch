@@ -61,3 +61,9 @@
 [0811/193018.671:ERROR:sandbox_policy_base.cc(345)] Failed to add sandbox rule. error = 2, subsystem = 0, semantics = 1, pattern = 'E:\gitproject\pachong\node_modules\puppeteer\.local-chromium\chrome-win32\*.pdb'
 [0811/193018.711:ERROR:sandbox_policy_base.cc(345)] Failed to add sandbox rule. error = 2, subsystem = 0, semantics = 1, pattern = 'E:\gitproject\pachong\node_modules\puppeteer\.local-chromium\chrome-win32\*.pdb'
 [0811/193018.713:ERROR:sandbox_policy_base.cc(345)] Failed to add sandbox rule. error = 2, subsystem = 0, semantics = 1, pattern = 'E:\gitproject\pachong\node_modules\puppeteer\.local-chromium\chrome-win32\*.pdb'
+[0921/170002.018:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0922/170002.072:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0923/170002.074:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0924/170014.383:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0925/170014.510:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0926/170017.121:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
