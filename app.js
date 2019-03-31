@@ -27,33 +27,35 @@ var un=require('./lib/un.js');
 //****************************
 
 //每4个小时运行一次(59分钟)
-schedule.scheduleJob('0 55 */1 * * *', function(){
-	console.log('爬虫：smzdm()，每4个小时运行一次');
-	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
-	pc.smzdm();
-});
+// schedule.scheduleJob('0 55 */1 * * *', function(){
+// 	console.log('爬虫：smzdm()，每4个小时运行一次');
+// 	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
+// 	pc.smzdm();
+// });
 
 //每1个小时运行一次(59分钟)
-schedule.scheduleJob('05 * * * *', function(){
-	console.log('爬虫：getContent() ，每1个小时运行一次');
-	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
-	pc.getContent();
-});
+// schedule.scheduleJob('15 * * * * *', function(){
+// 	console.log('爬虫：getContent() ，每1个小时运行一次');
+// 	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
+// 	pc.smzdm();
+// });
+
+pc.tripadvisor();
 
 //每天运行一次(24小时)
-schedule.scheduleJob('0 40 */6 * * *', function(){
-	console.log('爬虫：deleteOverdue()，每8小时运行一次');
-	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
-	pc.deleteOverdue();
-});
+// schedule.scheduleJob('0 40 */6 * * *', function(){
+// 	console.log('爬虫：deleteOverdue()，每8小时运行一次');
+// 	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
+// 	pc.deleteOverdue();
+// });
 
 //取联盟推广链接
 // 每小时运行一次
-schedule.scheduleJob('25 * * * *', function(){
-	console.log('取推广链接：getUnlink()，每小时运行一次');
-	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
-	un.getUnlink();
-});
+// schedule.scheduleJob('25 * * * *', function(){
+// 	console.log('取推广链接：getUnlink()，每小时运行一次');
+// 	console.log('运行时间：'+moment().format('YYYY-MM-DD HH:mm:ss'));
+// 	un.getUnlink();
+// });
 
 // pc.smzdm();
 // pc.getContent();
