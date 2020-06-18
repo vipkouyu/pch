@@ -40,7 +40,7 @@ var un=require('./lib/un.js');
 // 	pc.smzdm();
 // });
 
-pc.tripadvisor();
+pc.done();
 
 //每天运行一次(24小时)
 // schedule.scheduleJob('0 40 */6 * * *', function(){
