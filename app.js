@@ -1,9 +1,8 @@
 
-var moment=require('moment');
-var schedule = require('node-schedule');
 
+var schedule = require('node-schedule');
 var pc=require('./lib/pc.js');
-var un=require('./lib/un.js');
+
 
 //scheduleJob使用说明
 //*    *    *    *    *    *
@@ -40,7 +39,7 @@ var un=require('./lib/un.js');
 // 	pc.smzdm();
 // });
 
-pc.tripadvisor();
+pc.done();
 
 //每天运行一次(24小时)
 // schedule.scheduleJob('0 40 */6 * * *', function(){
